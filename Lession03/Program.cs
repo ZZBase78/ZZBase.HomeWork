@@ -430,11 +430,23 @@ namespace Lession03
 
         /// <summary>
         /// Конструктор дроби без параметров, запрашивает у пользователя числитель и знаменатель
+        /// Знаменатель не должен равняться нулю
         /// </summary>
         public Decimal()
         {
             num = ReadInt("Введите числитель дроби:");
-            denom = ReadInt("Введите знаменатель дроби:");
+            int new_denom;
+            do
+            {
+                new_denom = ReadInt("Введите знаменатель дроби:");
+                if (new_denom == 0)
+                {
+                    Console.Beep();
+                    Console.WriteLine("Знаменатель не может равняться нулю. Повторите ввод.");
+                }
+            } while (new_denom == 0);
+            denom = new_denom;
+            
             Reduction();
         }
 
@@ -1353,6 +1365,7 @@ namespace Lession03
             //Ввод начальных дробей, сокращение дробей осуществляется сразу при вводе или при операции
             Message("Введите данные первой дроби");
             Decimal d1 = new Decimal();
+            Message();
             Message("Введите данные второй дроби");
             Decimal d2 = new Decimal();
 
@@ -1371,6 +1384,7 @@ namespace Lession03
                     {
                         Message("Введите данные первой дроби");
                         d1 = new Decimal();
+                        Message();
                         Message("Введите данные второй дроби");
                         d2 = new Decimal();
                     }
