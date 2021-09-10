@@ -112,7 +112,7 @@ namespace Lession03
 
             Console.Title = "МЕНЮ";
 
-            string full_empty_string = new String(' ', Console.WindowWidth);
+            string full_empty_string = new String(' ', Console.WindowWidth - 1);
             NewLst(); //иницаилизируем коллекцию
             AddMenuItem(menu_items); //добавляем строки меню
 
@@ -1330,6 +1330,7 @@ namespace Lession03
             Message($"Сумма нечетных положительных чисел равна {sum}");
 
             PressAnyKey.Run();
+            FillScreen.Show(' ', 10000);
         }
 
         #endregion
