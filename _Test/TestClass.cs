@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace _Test
 {
-    class Program
+    class TestClass
     {
-        static void Main(string[] args)
+        static public void Print()
         {
-            TestClass.Print();
-
-            Console.ReadKey();
+            Console.WriteLine("123");
         }
     }
 }
