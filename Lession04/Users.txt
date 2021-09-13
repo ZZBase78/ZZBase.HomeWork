@@ -1,0 +1,15 @@
+﻿;Файл содаржит пары логина и пароля для контроля аутентификации пользователя
+;символ ";" рассматривается как комментарий
+;формат строки <login>|<Password> разделенный символом '|'
+root|GeekBrains
+admin|admin
+master|root_control
+Sergey|qawsed
+Stanislav|GrandTeacher
+user1|student
+user2|student_abc
+user3|std123
+user4|12345
+user5|qwert
+other|no_password
+remote|user_connect
