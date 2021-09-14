@@ -10,25 +10,7 @@ namespace _Test
     {
         static void Main(string[] args)
         {
-            string s = "";
-            Console.Write("Введите пароль:");
-            ConsoleKeyInfo c;
-            do
-            {
-                c = Console.ReadKey(true);
-                if (c.Key != ConsoleKey.Enter)
-                {
-                    s += c.KeyChar;
-                    Console.Write("*");
-                }
 
-            } while (c.Key != ConsoleKey.Enter);
-            Console.WriteLine();
-            Console.WriteLine($"Пароль: {s}");
-
-            Console.ReadLine();
-
-            
         }
     }
 }
