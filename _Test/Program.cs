@@ -9,12 +9,8 @@ namespace _Test
     class Program
     {
         static void Main(string[] args)
-        {
-            int i = 105;
-            double d = (double)i;
-            Console.WriteLine(d);
+        {   
 
-            Console.ReadLine();
         }
     }
 }
