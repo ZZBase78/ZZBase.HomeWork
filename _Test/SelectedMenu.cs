@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _Test
 {
-    class Menu
+    class SelectedMenu
     {
         public enum ItemAlign {Left, Center, Right};
 
@@ -36,12 +36,15 @@ namespace _Test
             Console.Write(menuitems[menuindex]);
         }
 
-        public int ChooseMenu(string[] param_menuitems, int min_menu_width, ItemAlign align)
+        public int ChooseMenu(string[] param_menuitems, int min_menu_width, ItemAlign align, string title)
         {
             Console.CursorVisible = false;
 
             ConsoleColor lastforeground = Console.ForegroundColor;
             ConsoleColor lastbackground = Console.BackgroundColor;
+
+            string old_title = Console.Title;
+            Console.Title = title;
 
             menuitems = new string[param_menuitems.Length];
 
@@ -127,6 +130,8 @@ namespace _Test
 
             Console.ForegroundColor = lastforeground;
             Console.BackgroundColor = lastbackground;
+
+            Console.Title = old_title;
 
             return return_value;
         }

@@ -9,7 +9,7 @@ namespace Lession06
     /// <summary>
     /// Класс для организации главного меню. с небольшой динамикой
     /// </summary>
-    class Menu
+    class SlowMenu
     {
         static List<string> _menu_items = new List<string>(); // коллекция пунктов меню
 

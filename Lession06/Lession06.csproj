@@ -45,7 +45,8 @@
   <ItemGroup>
     <Compile Include="Addition_Directory.cs" />
     <Compile Include="Common\FillScreen.cs" />
-    <Compile Include="Common\Menu.cs" />
+    <Compile Include="Common\SelectedMenu.cs" />
+    <Compile Include="Common\SlowMenu.cs" />
     <Compile Include="Common\My.cs" />
     <Compile Include="Common\PressAnyKey.cs" />
     <Compile Include="Program.cs" />

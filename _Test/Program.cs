@@ -10,12 +10,12 @@ namespace _Test
     {
         static void Main(string[] args)
         {
-            int result = new Menu().ChooseMenu(new string[] { 
+            int result = new SelectedMenu().ChooseMenu(new string[] { 
                 "Первое меню",
                 "Второе меню",
                 "Третье меню",
                 "ВЫХОД"
-            }, 25, Menu.ItemAlign.Right);
+            }, 25, SelectedMenu.ItemAlign.Left, "ГЛАВНОЕ МЕНЮ");
 
             Console.Write(result);
 
