@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6A99DD2A-14C5-4B62-BAD4-DB730F35DD7F}</ProjectGuid>
+    <ProjectGuid>{7005A751-1B87-42B5-9A1A-7FAC724E3406}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_Test</RootNamespace>
-    <AssemblyName>_Test</AssemblyName>
+    <RootNamespace>Lession06</RootNamespace>
+    <AssemblyName>Lession06</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,13 +43,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Menu.cs" />
+    <Compile Include="Addition_Directory.cs" />
+    <Compile Include="Common\FillScreen.cs" />
+    <Compile Include="Common\Menu.cs" />
+    <Compile Include="Common\My.cs" />
+    <Compile Include="Common\PressAnyKey.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestClass.cs" />
+    <Compile Include="Task01_original.cs" />
+    <Compile Include="Task01_updated.cs" />
+    <Compile Include="Task02_original.cs" />
+    <Compile Include="Task02_updated.cs" />
+    <Compile Include="Task03_original.cs" />
+    <Compile Include="Task03_updated.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="students.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
