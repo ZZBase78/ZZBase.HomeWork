@@ -89,7 +89,7 @@ namespace Lession06
         /// </summary>
         public static void Start()
         {
-            My.NewTask("Дополнительно. Структура каталогов");
+            My.NewTask("Дополнительно. Структура каталогов с файлами");
 
             DirectoryInfo directoryInfo = new DirectoryInfo("D:\\GeekBrains\\C-Sharp\\HomeWork\\ZZBase.HomeWork");
             //DirectoryInfo directoryInfo = new DirectoryInfo("C:\\");
