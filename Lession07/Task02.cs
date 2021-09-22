@@ -61,7 +61,7 @@ namespace Lession07
         /// <param name="e"></param>
         private void button_start_Click(object sender, EventArgs e)
         {
-            number = new Random().Next(1, 1001);
+            number = new Random().Next(1, 101);
             try_count = 0;
             Game();
         }
