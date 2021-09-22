@@ -10,16 +10,7 @@ namespace _Test
     {
         static void Main(string[] args)
         {
-            int result = new SelectedMenu().ChooseMenu(new string[] { 
-                "Первое меню",
-                "Второе меню",
-                "Третье меню",
-                "ВЫХОД"
-            }, 25, SelectedMenu.ItemAlign.Left, "ГЛАВНОЕ МЕНЮ");
 
-            Console.Write(result);
-
-            Console.ReadLine();
         }
     }
 }
