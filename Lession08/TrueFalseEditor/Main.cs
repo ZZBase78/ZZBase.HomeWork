@@ -146,5 +146,22 @@ namespace Lession08
         {
             cbTrue.Text = cbTrue.Checked.ToString();
         }
+
+        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (database == null)
+            {
+                Program.MessageToolError("База данных не создана");
+                return;
+            }
+
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                database.SaveAs(saveFileDialog.FileName);
+                // если возникает ошибка записи в файл,
+                // будет сообщение в методе, но можем продолжать работу, т.к. на текущее состояние базы это не влияет
+            }
+        }
     }
 }

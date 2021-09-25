@@ -104,8 +104,7 @@ namespace Lession08
             }
             catch (Exception e)
             {
-                Program.MessageToolError($"Ошибка чтения файла {fileName}");
-                Program.MessageToolError($"Ошибка: {e.Message}");
+                Program.MessageToolError($"Ошибка записи в файл {fileName}" + Environment.NewLine + $"Ошибка: {e.Message}");
                 return false;
             }
         }
@@ -125,8 +124,31 @@ namespace Lession08
             }
             catch (Exception e)
             {
-                Program.MessageToolError($"Ошибка записи в файл {fileName}");
-                Program.MessageToolError($"Ошибка: {e.Message}");
+                Program.MessageToolError($"Ошибка записи в файл {fileName}" + Environment.NewLine + $"Ошибка: {e.Message}");
+                return false;
+            }
+
+        }
+
+        public bool SaveAs(string newfilename)
+        {
+
+            try
+            {
+                XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<Question>));
+                using (Stream stream = new FileStream(newfilename, FileMode.Create, FileAccess.Write))
+                {
+                    xmlSerializer.Serialize(stream, list);
+                }
+                //В случае успешного сохранения, меняем имя связанного файла
+                FileName = newfilename;
+                saved = true; // успешное сохранение
+                return true;
+            }
+            catch (Exception e)
+            {
+                //В случае ошибки ничего не меняем
+                Program.MessageToolError($"Ошибка записи в файл {fileName}" + Environment.NewLine + $"Ошибка: {e.Message}");
                 return false;
             }
 
