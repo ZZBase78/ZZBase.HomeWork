@@ -1,5 +1,5 @@
 ﻿
-namespace Test_Main_Window_2
+namespace Lession08
 {
     partial class MainWindow
     {
@@ -30,6 +30,9 @@ namespace Test_Main_Window_2
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.ToolStripMenuItem_Tasks = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_Task01 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemTrueFalseEditor = new System.Windows.Forms.ToolStripMenuItem();
             this.windowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -41,6 +44,9 @@ namespace Test_Main_Window_2
             this.label_tool_title = new System.Windows.Forms.Label();
             this.richTextBox_tooltext = new System.Windows.Forms.RichTextBox();
             this.splitter_toolbox = new System.Windows.Forms.Splitter();
+            this.ToolStripMenuItem_Task02 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_Help = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_About = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel_toolbox.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -50,12 +56,38 @@ namespace Test_Main_Window_2
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.windowToolStripMenuItem});
+            this.ToolStripMenuItem_Tasks,
+            this.windowToolStripMenuItem,
+            this.ToolStripMenuItem_Help});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // ToolStripMenuItem_Tasks
+            // 
+            this.ToolStripMenuItem_Tasks.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem_Task01,
+            this.ToolStripMenuItem_Task02,
+            this.ToolStripMenuItemTrueFalseEditor});
+            this.ToolStripMenuItem_Tasks.Name = "ToolStripMenuItem_Tasks";
+            this.ToolStripMenuItem_Tasks.Size = new System.Drawing.Size(64, 20);
+            this.ToolStripMenuItem_Tasks.Text = "Задания";
+            // 
+            // ToolStripMenuItem_Task01
+            // 
+            this.ToolStripMenuItem_Task01.Name = "ToolStripMenuItem_Task01";
+            this.ToolStripMenuItem_Task01.Size = new System.Drawing.Size(425, 22);
+            this.ToolStripMenuItem_Task01.Text = "Задание 1. Рефлексия класса DateTime";
+            this.ToolStripMenuItem_Task01.Click += new System.EventHandler(this.ToolStripMenuItem_Task01_Click);
+            // 
+            // ToolStripMenuItemTrueFalseEditor
+            // 
+            this.ToolStripMenuItemTrueFalseEditor.Name = "ToolStripMenuItemTrueFalseEditor";
+            this.ToolStripMenuItemTrueFalseEditor.Size = new System.Drawing.Size(425, 22);
+            this.ToolStripMenuItemTrueFalseEditor.Text = "Задание 3. Редактор \"Верю  - не верю\". Обработка исключений";
+            this.ToolStripMenuItemTrueFalseEditor.Click += new System.EventHandler(this.ToolStripMenuItemTrueFalseEditor_Click);
             // 
             // windowToolStripMenuItem
             // 
@@ -84,9 +116,9 @@ namespace Test_Main_Window_2
             // 
             this.panel_toolbox.Controls.Add(this.tableLayoutPanel1);
             this.panel_toolbox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel_toolbox.Location = new System.Drawing.Point(0, 353);
+            this.panel_toolbox.Location = new System.Drawing.Point(0, 258);
             this.panel_toolbox.Name = "panel_toolbox";
-            this.panel_toolbox.Size = new System.Drawing.Size(800, 75);
+            this.panel_toolbox.Size = new System.Drawing.Size(800, 170);
             this.panel_toolbox.TabIndex = 5;
             // 
             // tableLayoutPanel1
@@ -101,7 +133,7 @@ namespace Test_Main_Window_2
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 75);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 170);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -167,18 +199,40 @@ namespace Test_Main_Window_2
             this.richTextBox_tooltext.Margin = new System.Windows.Forms.Padding(0);
             this.richTextBox_tooltext.Name = "richTextBox_tooltext";
             this.richTextBox_tooltext.ReadOnly = true;
-            this.richTextBox_tooltext.Size = new System.Drawing.Size(800, 55);
+            this.richTextBox_tooltext.Size = new System.Drawing.Size(800, 150);
             this.richTextBox_tooltext.TabIndex = 1;
             this.richTextBox_tooltext.Text = "";
             // 
             // splitter_toolbox
             // 
             this.splitter_toolbox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.splitter_toolbox.Location = new System.Drawing.Point(0, 350);
+            this.splitter_toolbox.Location = new System.Drawing.Point(0, 255);
             this.splitter_toolbox.Name = "splitter_toolbox";
             this.splitter_toolbox.Size = new System.Drawing.Size(800, 3);
             this.splitter_toolbox.TabIndex = 6;
             this.splitter_toolbox.TabStop = false;
+            // 
+            // ToolStripMenuItem_Task02
+            // 
+            this.ToolStripMenuItem_Task02.Name = "ToolStripMenuItem_Task02";
+            this.ToolStripMenuItem_Task02.Size = new System.Drawing.Size(425, 22);
+            this.ToolStripMenuItem_Task02.Text = "Задание 2. TextBox и NumericUpDown";
+            this.ToolStripMenuItem_Task02.Click += new System.EventHandler(this.ToolStripMenuItem_Task02_Click);
+            // 
+            // ToolStripMenuItem_Help
+            // 
+            this.ToolStripMenuItem_Help.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem_About});
+            this.ToolStripMenuItem_Help.Name = "ToolStripMenuItem_Help";
+            this.ToolStripMenuItem_Help.Size = new System.Drawing.Size(65, 20);
+            this.ToolStripMenuItem_Help.Text = "Справка";
+            // 
+            // ToolStripMenuItem_About
+            // 
+            this.ToolStripMenuItem_About.Name = "ToolStripMenuItem_About";
+            this.ToolStripMenuItem_About.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuItem_About.Text = "О программе";
+            this.ToolStripMenuItem_About.Click += new System.EventHandler(this.ToolStripMenuItem_About_Click);
             // 
             // MainWindow
             // 
@@ -193,6 +247,7 @@ namespace Test_Main_Window_2
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainWindow";
             this.Text = "MainWindow";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel_toolbox.ResumeLayout(false);
@@ -218,6 +273,12 @@ namespace Test_Main_Window_2
         private System.Windows.Forms.ToolStripMenuItem windowToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolBoxToolStripMenuItem;
         private System.Windows.Forms.RichTextBox richTextBox_tooltext;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Tasks;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemTrueFalseEditor;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Task01;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Task02;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Help;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_About;
     }
 }
 
