@@ -15,8 +15,11 @@ namespace Lession08.Task04
 
         string filename;
 
-        bool _saved;
+        bool _saved; // признак что база сохранена после изменений
 
+        /// <summary>
+        /// Свойство показывает доступна ли база данных
+        /// </summary>
         public bool Enabled
         {
             get
@@ -36,6 +39,9 @@ namespace Lession08.Task04
             }
         }
 
+        /// <summary>
+        /// Создание пустой базы данных
+        /// </summary>
         public void Create()
         {
             list = new List<Person>();
@@ -43,6 +49,10 @@ namespace Lession08.Task04
             filename = "";
         }
 
+        /// <summary>
+        /// Выбор файла для записи
+        /// </summary>
+        /// <returns></returns>
         public string ChooseFileNameToSave()
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
@@ -57,6 +67,10 @@ namespace Lession08.Task04
 
         }
 
+        /// <summary>
+        /// Выбор файла для загрузки
+        /// </summary>
+        /// <returns></returns>
         public string ChooseFileNameToLoad()
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -71,6 +85,10 @@ namespace Lession08.Task04
 
         }
 
+        /// <summary>
+        /// Сохранение базы под новым именем
+        /// </summary>
+        /// <returns></returns>
         public bool SaveAs()
         {
             string newfilename = ChooseFileNameToSave();
@@ -87,6 +105,11 @@ namespace Lession08.Task04
                 
         }
 
+        /// <summary>
+        /// Сохранение базы под текущим именем,
+        /// и если нет имени то запрос имени файла
+        /// </summary>
+        /// <returns></returns>
         public bool Save()
         {
             string newfilename;
@@ -121,6 +144,10 @@ namespace Lession08.Task04
             }
         }
 
+        /// <summary>
+        /// Загрузка базы данных из файла
+        /// </summary>
+        /// <returns></returns>
         public bool Load()
         {
             string newfilename = ChooseFileNameToLoad();

@@ -26,6 +26,9 @@ namespace Lession08.Task04
             UpdateVisible();
         }
 
+        /// <summary>
+        /// Метод управляем видимостью и доступностью элементов
+        /// </summary>
         public void UpdateVisible()
         {
             bool db = database.Enabled;
@@ -38,6 +41,9 @@ namespace Lession08.Task04
             button_Delete.Enabled = bindingSource.Position != -1 && bindingSource.Position < bindingSource.Count;
         }
 
+        /// <summary>
+        /// Инициализирует название колонок
+        /// </summary>
         void UpdateColumnHeaders()
         {
             dataGridView.Columns[0].HeaderText = "Имя";
@@ -46,6 +52,11 @@ namespace Lession08.Task04
             dataGridView.Columns[3].HeaderText = "Дата рождения";
         }
 
+        /// <summary>
+        /// Создание новой базы данных
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ToolStripMenuItem_Create_Click(object sender, EventArgs e)
         {
             database.Create();
@@ -56,6 +67,11 @@ namespace Lession08.Task04
             UpdateVisible();
         }
 
+        /// <summary>
+        /// Добавление новой записи в базу данных
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button_Add_Click(object sender, EventArgs e)
         {
             bindingSource.Add(new Person());
@@ -64,13 +80,24 @@ namespace Lession08.Task04
             UpdateVisible();
         }
 
+        /// <summary>
+        /// Сообщение при не корректном ввода данных в ячейку
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             Program.MessageToolError("В поле введены не корректные данные");
         }
 
+        /// <summary>
+        /// Удаление записи из базы данных
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button_Delete_Click(object sender, EventArgs e)
         {
+            // проверка корректности текущей позиции
             if (bindingSource.Position != -1 && bindingSource.Position < bindingSource.Count)
             {
                 bindingSource.RemoveCurrent();
@@ -80,11 +107,21 @@ namespace Lession08.Task04
             
         }
 
+        /// <summary>
+        /// Регистрации изменений в базе данных, установка флага база данных изменена
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             database.Saved = false;
         }
 
+        /// <summary>
+        /// Запись базы данных под тем же именем
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ToolStripMenuItem_Save_Click(object sender, EventArgs e)
         {
             if (database.Enabled)
@@ -93,6 +130,11 @@ namespace Lession08.Task04
             }
         }
 
+        /// <summary>
+        /// Открытие существующей базы данных
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ToolStripMenuItem_Open_Click(object sender, EventArgs e)
         {
             if (database.Enabled && !database.Saved)
@@ -104,6 +146,7 @@ namespace Lession08.Task04
             //database.Create();
             if (database.Load())
             {
+                // если пользователь не отказался от выбора имени файла
                 bindingSource.DataSource = database.list;
                 dataGridView.DataSource = bindingSource;
                 UpdateColumnHeaders();
@@ -112,11 +155,21 @@ namespace Lession08.Task04
 
         }
 
+        /// <summary>
+        /// Сохранение базы под новым именем
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ToolStripMenuItem_SaveAs_Click(object sender, EventArgs e)
         {
             database.SaveAs();
         }
 
+        /// <summary>
+        /// Проверка сохранения базы данных перед закрытиыем формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Task04_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (database.Enabled && !database.Saved)
