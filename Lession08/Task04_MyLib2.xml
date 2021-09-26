@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<ArrayOfPerson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Person>
+    <FirstName>Имя</FirstName>
+    <LastName>Фамилия</LastName>
+    <MiddleName>Отчество</MiddleName>
+    <BirthDate>2021-09-27T00:00:00+03:00</BirthDate>
+  </Person>
+  <Person>
+    <FirstName>Имя</FirstName>
+    <LastName>Фамилия</LastName>
+    <MiddleName>Отчество</MiddleName>
+    <BirthDate>2021-09-27T00:00:00+03:00</BirthDate>
+  </Person>
+  <Person>
+    <FirstName>Имя</FirstName>
+    <LastName>Фамилия</LastName>
+    <MiddleName>Отчество</MiddleName>
+    <BirthDate>2021-09-27T00:00:00+03:00</BirthDate>
+  </Person>
+</ArrayOfPerson>

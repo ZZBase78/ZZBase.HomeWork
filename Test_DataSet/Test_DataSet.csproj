@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D59CE251-5165-407E-8B91-93117F850F45}</ProjectGuid>
+    <ProjectGuid>{BB3D1103-C08D-4465-9D7A-A081186C8912}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Lession08</RootNamespace>
-    <AssemblyName>Lession08</AssemblyName>
+    <RootNamespace>Test_DataSet</RootNamespace>
+    <AssemblyName>Test_DataSet</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,53 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Task03b\Form_About.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Task03b\Form_About.Designer.cs">
-      <DependentUpon>Form_About.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainWindow.Designer.cs">
-      <DependentUpon>MainWindow.cs</DependentUpon>
-    </Compile>
+    <Compile Include="ListPerson.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Task01\Task01.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Task01\Task01.Designer.cs">
-      <DependentUpon>Task01.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Task02\Task02.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Task02\Task02.Designer.cs">
-      <DependentUpon>Task02.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Task04\DataBase.cs" />
-    <Compile Include="Task04\Person.cs" />
-    <Compile Include="Task04\Task04.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Task04\Task04.Designer.cs">
-      <DependentUpon>Task04.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TrueFalseEditor\Main.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TrueFalseEditor\Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TrueFalseEditor\Question.cs" />
-    <Compile Include="TrueFalseEditor\TrueFalse.cs" />
-    <EmbeddedResource Include="Task03b\Form_About.resx">
-      <DependentUpon>Form_About.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainWindow.resx">
-      <DependentUpon>MainWindow.cs</DependentUpon>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -103,18 +68,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Task01\Task01.resx">
-      <DependentUpon>Task01.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Task02\Task02.resx">
-      <DependentUpon>Task02.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Task04\Task04.resx">
-      <DependentUpon>Task04.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TrueFalseEditor\Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include="Properties\DataSources\ListPerson.datasource" />
+    <None Include="Properties\DataSources\Person.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -128,6 +83,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

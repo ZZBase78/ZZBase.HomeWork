@@ -83,5 +83,10 @@ namespace Lession08
         {
             OpenChildForm(new Form_About());
         }
+
+        private void ToolStripMenuItem_Task04_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Task04.Task04());
+        }
     }
 }

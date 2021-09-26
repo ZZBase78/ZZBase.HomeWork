@@ -32,9 +32,12 @@ namespace Lession08
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ToolStripMenuItem_Tasks = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_Task01 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_Task02 = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemTrueFalseEditor = new System.Windows.Forms.ToolStripMenuItem();
             this.windowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_Help = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_About = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.panel_toolbox = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -44,9 +47,7 @@ namespace Lession08
             this.label_tool_title = new System.Windows.Forms.Label();
             this.richTextBox_tooltext = new System.Windows.Forms.RichTextBox();
             this.splitter_toolbox = new System.Windows.Forms.Splitter();
-            this.ToolStripMenuItem_Task02 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripMenuItem_Help = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripMenuItem_About = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_Task04 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel_toolbox.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -70,7 +71,8 @@ namespace Lession08
             this.ToolStripMenuItem_Tasks.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripMenuItem_Task01,
             this.ToolStripMenuItem_Task02,
-            this.ToolStripMenuItemTrueFalseEditor});
+            this.ToolStripMenuItemTrueFalseEditor,
+            this.ToolStripMenuItem_Task04});
             this.ToolStripMenuItem_Tasks.Name = "ToolStripMenuItem_Tasks";
             this.ToolStripMenuItem_Tasks.Size = new System.Drawing.Size(64, 20);
             this.ToolStripMenuItem_Tasks.Text = "Задания";
@@ -81,6 +83,13 @@ namespace Lession08
             this.ToolStripMenuItem_Task01.Size = new System.Drawing.Size(425, 22);
             this.ToolStripMenuItem_Task01.Text = "Задание 1. Рефлексия класса DateTime";
             this.ToolStripMenuItem_Task01.Click += new System.EventHandler(this.ToolStripMenuItem_Task01_Click);
+            // 
+            // ToolStripMenuItem_Task02
+            // 
+            this.ToolStripMenuItem_Task02.Name = "ToolStripMenuItem_Task02";
+            this.ToolStripMenuItem_Task02.Size = new System.Drawing.Size(425, 22);
+            this.ToolStripMenuItem_Task02.Text = "Задание 2. TextBox и NumericUpDown";
+            this.ToolStripMenuItem_Task02.Click += new System.EventHandler(this.ToolStripMenuItem_Task02_Click);
             // 
             // ToolStripMenuItemTrueFalseEditor
             // 
@@ -103,6 +112,21 @@ namespace Lession08
             this.toolBoxToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
             this.toolBoxToolStripMenuItem.Text = "Служебные сообщения";
             this.toolBoxToolStripMenuItem.Click += new System.EventHandler(this.toolBoxToolStripMenuItem_Click);
+            // 
+            // ToolStripMenuItem_Help
+            // 
+            this.ToolStripMenuItem_Help.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem_About});
+            this.ToolStripMenuItem_Help.Name = "ToolStripMenuItem_Help";
+            this.ToolStripMenuItem_Help.Size = new System.Drawing.Size(65, 20);
+            this.ToolStripMenuItem_Help.Text = "Справка";
+            // 
+            // ToolStripMenuItem_About
+            // 
+            this.ToolStripMenuItem_About.Name = "ToolStripMenuItem_About";
+            this.ToolStripMenuItem_About.Size = new System.Drawing.Size(149, 22);
+            this.ToolStripMenuItem_About.Text = "О программе";
+            this.ToolStripMenuItem_About.Click += new System.EventHandler(this.ToolStripMenuItem_About_Click);
             // 
             // statusStrip1
             // 
@@ -212,27 +236,12 @@ namespace Lession08
             this.splitter_toolbox.TabIndex = 6;
             this.splitter_toolbox.TabStop = false;
             // 
-            // ToolStripMenuItem_Task02
+            // ToolStripMenuItem_Task04
             // 
-            this.ToolStripMenuItem_Task02.Name = "ToolStripMenuItem_Task02";
-            this.ToolStripMenuItem_Task02.Size = new System.Drawing.Size(425, 22);
-            this.ToolStripMenuItem_Task02.Text = "Задание 2. TextBox и NumericUpDown";
-            this.ToolStripMenuItem_Task02.Click += new System.EventHandler(this.ToolStripMenuItem_Task02_Click);
-            // 
-            // ToolStripMenuItem_Help
-            // 
-            this.ToolStripMenuItem_Help.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripMenuItem_About});
-            this.ToolStripMenuItem_Help.Name = "ToolStripMenuItem_Help";
-            this.ToolStripMenuItem_Help.Size = new System.Drawing.Size(65, 20);
-            this.ToolStripMenuItem_Help.Text = "Справка";
-            // 
-            // ToolStripMenuItem_About
-            // 
-            this.ToolStripMenuItem_About.Name = "ToolStripMenuItem_About";
-            this.ToolStripMenuItem_About.Size = new System.Drawing.Size(180, 22);
-            this.ToolStripMenuItem_About.Text = "О программе";
-            this.ToolStripMenuItem_About.Click += new System.EventHandler(this.ToolStripMenuItem_About_Click);
+            this.ToolStripMenuItem_Task04.Name = "ToolStripMenuItem_Task04";
+            this.ToolStripMenuItem_Task04.Size = new System.Drawing.Size(425, 22);
+            this.ToolStripMenuItem_Task04.Text = "Задание 4. Собственная утилита хранения данных";
+            this.ToolStripMenuItem_Task04.Click += new System.EventHandler(this.ToolStripMenuItem_Task04_Click);
             // 
             // MainWindow
             // 
@@ -279,6 +288,7 @@ namespace Lession08
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Task02;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Help;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_About;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Task04;
     }
 }
 
