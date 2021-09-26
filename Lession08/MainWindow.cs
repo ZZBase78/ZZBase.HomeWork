@@ -39,6 +39,9 @@ namespace Lession08
 
         public void ToolBoxVisible(bool visible)
         {
+            //чтобы избежать мерцании формы при появлении, сместим координаты
+            splitter_toolbox.Location = new Point(splitter_toolbox.Location.X, this.Size.Height - splitter_toolbox.Size.Height - panel_toolbox.Size.Height - 61);
+            panel_toolbox.Location = new Point(panel_toolbox.Location.X, this.Size.Height - panel_toolbox.Size.Height - 61);
             splitter_toolbox.Visible = visible;
             panel_toolbox.Visible = visible;
         }
@@ -87,6 +90,11 @@ namespace Lession08
         private void ToolStripMenuItem_Task04_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Task04.Task04());
+        }
+
+        private void ToolStripMenuItem_Converter_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Task05.Task05());
         }
     }
 }

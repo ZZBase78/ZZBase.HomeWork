@@ -34,6 +34,7 @@ namespace Lession08
             this.ToolStripMenuItem_Task01 = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_Task02 = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemTrueFalseEditor = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_Task04 = new System.Windows.Forms.ToolStripMenuItem();
             this.windowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_Help = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,7 +48,7 @@ namespace Lession08
             this.label_tool_title = new System.Windows.Forms.Label();
             this.richTextBox_tooltext = new System.Windows.Forms.RichTextBox();
             this.splitter_toolbox = new System.Windows.Forms.Splitter();
-            this.ToolStripMenuItem_Task04 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_Converter = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel_toolbox.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -72,7 +73,8 @@ namespace Lession08
             this.ToolStripMenuItem_Task01,
             this.ToolStripMenuItem_Task02,
             this.ToolStripMenuItemTrueFalseEditor,
-            this.ToolStripMenuItem_Task04});
+            this.ToolStripMenuItem_Task04,
+            this.ToolStripMenuItem_Converter});
             this.ToolStripMenuItem_Tasks.Name = "ToolStripMenuItem_Tasks";
             this.ToolStripMenuItem_Tasks.Size = new System.Drawing.Size(64, 20);
             this.ToolStripMenuItem_Tasks.Text = "Задания";
@@ -97,6 +99,13 @@ namespace Lession08
             this.ToolStripMenuItemTrueFalseEditor.Size = new System.Drawing.Size(425, 22);
             this.ToolStripMenuItemTrueFalseEditor.Text = "Задание 3. Редактор \"Верю  - не верю\". Обработка исключений";
             this.ToolStripMenuItemTrueFalseEditor.Click += new System.EventHandler(this.ToolStripMenuItemTrueFalseEditor_Click);
+            // 
+            // ToolStripMenuItem_Task04
+            // 
+            this.ToolStripMenuItem_Task04.Name = "ToolStripMenuItem_Task04";
+            this.ToolStripMenuItem_Task04.Size = new System.Drawing.Size(425, 22);
+            this.ToolStripMenuItem_Task04.Text = "Задание 4. Собственная утилита хранения данных";
+            this.ToolStripMenuItem_Task04.Click += new System.EventHandler(this.ToolStripMenuItem_Task04_Click);
             // 
             // windowToolStripMenuItem
             // 
@@ -236,12 +245,12 @@ namespace Lession08
             this.splitter_toolbox.TabIndex = 6;
             this.splitter_toolbox.TabStop = false;
             // 
-            // ToolStripMenuItem_Task04
+            // ToolStripMenuItem_Converter
             // 
-            this.ToolStripMenuItem_Task04.Name = "ToolStripMenuItem_Task04";
-            this.ToolStripMenuItem_Task04.Size = new System.Drawing.Size(425, 22);
-            this.ToolStripMenuItem_Task04.Text = "Задание 4. Собственная утилита хранения данных";
-            this.ToolStripMenuItem_Task04.Click += new System.EventHandler(this.ToolStripMenuItem_Task04_Click);
+            this.ToolStripMenuItem_Converter.Name = "ToolStripMenuItem_Converter";
+            this.ToolStripMenuItem_Converter.Size = new System.Drawing.Size(425, 22);
+            this.ToolStripMenuItem_Converter.Text = "Задание 5. Конвертер из CSV в XML";
+            this.ToolStripMenuItem_Converter.Click += new System.EventHandler(this.ToolStripMenuItem_Converter_Click);
             // 
             // MainWindow
             // 
@@ -289,6 +298,7 @@ namespace Lession08
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Help;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_About;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Task04;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Converter;
     }
 }
 

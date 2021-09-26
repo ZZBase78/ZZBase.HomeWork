@@ -80,6 +80,14 @@
     <Compile Include="Task04\Task04.Designer.cs">
       <DependentUpon>Task04.cs</DependentUpon>
     </Compile>
+    <Compile Include="Task05\Converter.cs" />
+    <Compile Include="Task05\Student.cs" />
+    <Compile Include="Task05\Task05.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Task05\Task05.Designer.cs">
+      <DependentUpon>Task05.cs</DependentUpon>
+    </Compile>
     <Compile Include="TrueFalseEditor\Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Task04\Task04.resx">
       <DependentUpon>Task04.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task05\Task05.resx">
+      <DependentUpon>Task05.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrueFalseEditor\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
