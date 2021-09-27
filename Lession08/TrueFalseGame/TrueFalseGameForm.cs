@@ -22,7 +22,10 @@ namespace Lession08.TrueFalseGame
 
             UpdateVisible();
         }
-
+        
+        /// <summary>
+        /// Обновление элементов формы
+        /// </summary>
         void UpdateVisible()
         {
             label_Question.Text = engine.GetCurrentQuestionText();
@@ -39,6 +42,9 @@ namespace Lession08.TrueFalseGame
             UpdateVisible();
         }
 
+        /// <summary>
+        /// Конец Игры
+        /// </summary>
         void EndGame()
         {
             bool best = engine.IsBestGame();
@@ -51,6 +57,10 @@ namespace Lession08.TrueFalseGame
             F.ShowDialog();
         }
 
+        /// <summary>
+        /// Проверка ответа на вопрос
+        /// </summary>
+        /// <param name="answer"></param>
         public void Move(bool answer)
         {
             bool correct = engine.IsTrue(answer);
@@ -64,6 +74,7 @@ namespace Lession08.TrueFalseGame
 
             if (last) EndGame();
         }
+
         private void button_True_Click(object sender, EventArgs e)
         {
             Move(true);

@@ -24,12 +24,20 @@ namespace Lession08.TrueFalseGame
 
         }
 
+        /// <summary>
+        /// Обновление элементов формы
+        /// </summary>
         public void UpdateVisible()
         {
             label_Text.Text = text;
             if (victory) label_Text.ForeColor = Color.Red;
         }
 
+        /// <summary>
+        /// Запуск музыки в зависимости установлен ли рекорд
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void EndGameForm_Load(object sender, EventArgs e)
         {
             if (victory)
@@ -50,6 +58,11 @@ namespace Lession08.TrueFalseGame
             }
         }
 
+        /// <summary>
+        /// Заркытие формы, т.к. форма открывается модально
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonOK_Click(object sender, EventArgs e)
         {
             Close();

@@ -45,6 +45,9 @@ namespace Lession08.TrueFalseGame
             rnd = new Random();
         }
 
+        /// <summary>
+        /// Загрузка файла
+        /// </summary>
         void Load()
         {
             try
@@ -61,11 +64,20 @@ namespace Lession08.TrueFalseGame
                 questions = new List<Question>();
             }
         }
+        
+        /// <summary>
+        /// Начало новой игры
+        /// </summary>
         public void NewGame()
         {
             Load();
             GetNextQuestion();
         }
+        
+        /// <summary>
+        /// Полчение следующего вопроса
+        /// </summary>
+        /// <returns></returns>
         public bool GetNextQuestion()
         {
 
@@ -80,16 +92,32 @@ namespace Lession08.TrueFalseGame
             questions.RemoveAt(next_index);
             return true;
         }
+        
+        /// <summary>
+        /// Увеличение счетчиков текущей игры
+        /// </summary>
+        /// <param name="correct"></param>
         public void Increment_Current_Game(bool correct)
         {
             current_count++;
             current_true += correct ? 1 : 0;
             current_percent = current_true * 100 / current_count;
         }
+        
+        /// <summary>
+        /// Проверка корректности ответа
+        /// </summary>
+        /// <param name="answer"></param>
+        /// <returns></returns>
         public bool IsTrue(bool answer)
         {
             return (current_question.TrueFalse == answer);
         }
+        
+        /// <summary>
+        /// Проигрывание музыки в зависимости от правильности ответа
+        /// </summary>
+        /// <param name="correct"></param>
         public void playSound(bool correct)
         {
             if (correct)
@@ -110,22 +138,46 @@ namespace Lession08.TrueFalseGame
             }
 
         }
+        
+        /// <summary>
+        /// Получение текста текущего вопроса
+        /// </summary>
+        /// <returns></returns>
         public string GetCurrentQuestionText()
         {
             if (current_question == null) return ""; else return current_question.Text;
         }
+        
+        /// <summary>
+        /// Получение представления текущего состояния игры
+        /// </summary>
+        /// <returns></returns>
         public string CurrentGameString()
         {
             return $"Текущая игра: вопросов: {current_count}; правильных ответов: {current_true}; Успех: {current_percent:F0}%";
         }
+        
+        /// <summary>
+        /// Получение представления лучшей игры
+        /// </summary>
+        /// <returns></returns>
         public string BestGameString()
         {
             return $"Текущая игра: вопросов: {best_count}; правильных ответов: {best_true}; Успех: {best_percent:F0}%";
         }
+        
+        /// <summary>
+        /// Проверка последний ли вопрос
+        /// </summary>
+        /// <returns></returns>
         public bool IsLast()
         {
             return (questions.Count == 0) && (current_question != null);
         }
+        
+        /// <summary>
+        /// Обновление данных лучшей игры
+        /// </summary>
         public void UpdateBestGame()
         {
             if (IsBestGame())
@@ -139,10 +191,20 @@ namespace Lession08.TrueFalseGame
                 current_true = 0;
             }
         }
+
+        /// <summary>
+        /// Является ли текущая игра лучшей
+        /// </summary>
+        /// <returns></returns>
         public bool IsBestGame()
         {
             return current_percent > best_percent;
         }
+
+        /// <summary>
+        /// Формирование строки по окончании игры
+        /// </summary>
+        /// <returns></returns>
         public string EngGameMessage()
         {
             if (IsBestGame())
