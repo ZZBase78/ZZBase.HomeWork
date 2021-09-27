@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Media;
 using System.Text;
@@ -33,13 +34,19 @@ namespace Lession08.TrueFalseGame
         {
             if (victory)
             {
-                SoundPlayer simpleSound = new SoundPlayer("TrueFalseGame\\Victory.wav");
-                simpleSound.Play();
+                if (File.Exists("TrueFalseGame\\Victory.wav"))
+                {
+                    SoundPlayer simpleSound = new SoundPlayer("TrueFalseGame\\Victory.wav");
+                    simpleSound.Play();
+                }
             }
             else
             {
-                SoundPlayer simpleSound = new SoundPlayer("TrueFalseGame\\EndGame.wav");
-                simpleSound.Play();
+                if (File.Exists("TrueFalseGame\\EndGame.wav"))
+                {
+                    SoundPlayer simpleSound = new SoundPlayer("TrueFalseGame\\EndGame.wav");
+                    simpleSound.Play();
+                }
             }
         }
 

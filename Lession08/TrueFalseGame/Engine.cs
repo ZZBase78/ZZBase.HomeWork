@@ -90,17 +90,23 @@ namespace Lession08.TrueFalseGame
         {
             return (current_question.TrueFalse == answer);
         }
-        public void playSound(bool corrext)
+        public void playSound(bool correct)
         {
-            if (corrext)
+            if (correct)
             {
-                SoundPlayer simpleSound = new SoundPlayer("TrueFalseGame\\Correct.wav");
-                simpleSound.Play();
+                if (File.Exists("TrueFalseGame\\Correct.wav"))
+                {
+                    SoundPlayer simpleSound = new SoundPlayer("TrueFalseGame\\Correct.wav");
+                    simpleSound.Play();
+                }
             }
             else
             {
-                SoundPlayer simpleSound = new SoundPlayer("TrueFalseGame\\NotCorrect.wav");
-                simpleSound.Play();
+                if (File.Exists("TrueFalseGame\\NotCorrect.wav"))
+                {
+                    SoundPlayer simpleSound = new SoundPlayer("TrueFalseGame\\NotCorrect.wav");
+                    simpleSound.Play();
+                }
             }
 
         }
@@ -145,7 +151,7 @@ namespace Lession08.TrueFalseGame
             }
             else
             {
-                return "Вы ответили на все вопросы" + Environment.NewLine + "Успех: " + $"{current_percent:F0}";
+                return "Вы ответили на все вопросы" + Environment.NewLine + "Успех: " + $"{current_percent:F0}%";
             }
             
         }
