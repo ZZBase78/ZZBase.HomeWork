@@ -96,5 +96,10 @@ namespace Lession08
         {
             OpenChildForm(new Task05.Task05());
         }
+
+        private void ToolStripMenuItem_TrueFalseGame_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new TrueFalseGame.TrueFalseGameForm());
+        }
     }
 }

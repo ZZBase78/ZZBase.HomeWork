@@ -96,6 +96,19 @@
     </Compile>
     <Compile Include="TrueFalseEditor\Question.cs" />
     <Compile Include="TrueFalseEditor\TrueFalse.cs" />
+    <Compile Include="TrueFalseGame\EndGameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrueFalseGame\EndGameForm.Designer.cs">
+      <DependentUpon>EndGameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrueFalseGame\Engine.cs" />
+    <Compile Include="TrueFalseGame\TrueFalseGameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrueFalseGame\TrueFalseGameForm.Designer.cs">
+      <DependentUpon>TrueFalseGameForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Task03b\Form_About.resx">
       <DependentUpon>Form_About.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +139,12 @@
     <EmbeddedResource Include="TrueFalseEditor\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TrueFalseGame\EndGameForm.resx">
+      <DependentUpon>EndGameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrueFalseGame\TrueFalseGameForm.resx">
+      <DependentUpon>TrueFalseGameForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -140,5 +159,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Content Include="TrueFalseGame\Correct.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TrueFalseGame\EndGame.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TrueFalseGame\newtf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TrueFalseGame\NotCorrect.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TrueFalseGame\Victory.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -104,7 +104,7 @@ namespace Lession08
             }
             catch (Exception e)
             {
-                Program.MessageToolError($"Ошибка записи в файл {fileName}" + Environment.NewLine + $"Ошибка: {e.Message}");
+                Program.MessageToolError($"Ошибка чтения файла {fileName}" + Environment.NewLine + $"Ошибка: {e.Message}");
                 return false;
             }
         }
