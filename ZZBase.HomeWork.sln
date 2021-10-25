@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_DataGrid", "Test_DataGrid\Test_DataGrid.csproj", "{118BC945-5D81-47FF-B44A-86FC7EE909B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp2", "ConsoleApp2\ConsoleApp2.csproj", "{DA585D22-F0F2-4424-8878-6573438463E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -103,6 +105,10 @@ Global
 		{118BC945-5D81-47FF-B44A-86FC7EE909B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{118BC945-5D81-47FF-B44A-86FC7EE909B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{118BC945-5D81-47FF-B44A-86FC7EE909B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA585D22-F0F2-4424-8878-6573438463E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA585D22-F0F2-4424-8878-6573438463E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA585D22-F0F2-4424-8878-6573438463E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA585D22-F0F2-4424-8878-6573438463E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -122,6 +128,7 @@ Global
 		{BB3D1103-C08D-4465-9D7A-A081186C8912} = {DA3FCF03-1456-4723-8B7B-AAB121BAA55D}
 		{4873AFAD-1E07-4DE0-B9AE-6312B6220756} = {DA3FCF03-1456-4723-8B7B-AAB121BAA55D}
 		{118BC945-5D81-47FF-B44A-86FC7EE909B0} = {DA3FCF03-1456-4723-8B7B-AAB121BAA55D}
+		{DA585D22-F0F2-4424-8878-6573438463E3} = {DA3FCF03-1456-4723-8B7B-AAB121BAA55D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DB0E24D8-5675-4547-BCF6-3117DCD20F33}
